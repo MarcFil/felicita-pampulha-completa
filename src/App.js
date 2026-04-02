@@ -75,7 +75,7 @@ const injectStyles = () => {
     .team-item { border-bottom:1px solid rgba(232,120,154,.2); padding-bottom:20px; transition:border-color .4s; }
     .team-item:hover { border-color:var(--rose); }
 
-    .buffet-row { display:flex; flex-direction:column; padding-bottom:20px; border-bottom:1px solid var(--rose20); }
+    .buffet-row { display:flex; flex-direction:column; padding-bottom:20px; border-bottom:1px solid var(--blue20); }
     @media (min-width:768px) { .buffet-row { flex-direction:row; align-items:baseline; } }
 
     /* INVESTIMENTO — padrão Felicitá */
@@ -319,10 +319,10 @@ export default function App() {
           <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1.6fr', gap: isMobile ? 40 : 72, alignItems: 'start' }}>
             <FadeIn>
               <div>
-                <EyR text="Estrutura & Exclusividade" />
+                <EyB text="Estrutura & Exclusividade" />
                 <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: 'clamp(28px,3vw,42px)', fontWeight: 700, color: 'var(--txt)', lineHeight: 1.12, marginBottom: 6 }}>Detalhes que elevam</h2>
-                <h2 style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 'clamp(28px,3vw,42px)', fontStyle: 'italic', fontWeight: 400, color: 'var(--rose)', lineHeight: 1.12 }}>cada momento.</h2>
-                <RuleR />
+                <h2 style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 'clamp(28px,3vw,42px)', fontStyle: 'italic', fontWeight: 400, color: 'var(--blue)', lineHeight: 1.12 }}>cada momento.</h2>
+                <div style={{ width: 56, height: 2, background: 'linear-gradient(90deg,var(--blue),transparent)', margin: '18px 0', borderRadius: 2 }} />
                 <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 15, fontWeight: 300, color: 'var(--txts)', lineHeight: 1.9, marginTop: 16 }}>
                   A Unidade Palmares foi concebida para ser o cenário perfeito de uma festa única. Cada elemento foi escolhido com um único critério: a excelência — inclusive para os pequenos.
                 </p>
@@ -339,7 +339,7 @@ export default function App() {
               ].map((c, i) => (
                 <FadeIn delay={i * 70} key={i}>
                   <div className="diff-card">
-                    <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: '.3em', textTransform: 'uppercase', color: 'var(--rose)', display: 'block', marginBottom: 10 }}>{c.t}</span>
+                    <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 10, fontWeight: 700, letterSpacing: '.3em', textTransform: 'uppercase', color: 'var(--blue)', display: 'block', marginBottom: 10 }}>{c.t}</span>
                     <span style={{ fontFamily: "'Playfair Display',serif", fontSize: 24, fontWeight: 500, color: 'var(--txt)', display: 'block', lineHeight: 1.1, marginBottom: 4 }}>{c.v}</span>
                     <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 13, fontWeight: 300, color: 'var(--txts)' }}>{c.s}</span>
                   </div>
@@ -365,13 +365,13 @@ export default function App() {
             <FadeIn>
               <Frame src="/images/ambiance-infantil.jpg" alt="Salão decorado" style={{ aspectRatio: '3/4' }} imgStyle={{ objectPosition: 'center 35%' }} />
             </FadeIn>
-            {!isMobile && <div style={{ background: 'var(--rose20)', height: '60%', width: 1 }} />}
+            {!isMobile && <div style={{ background: 'var(--blue20)', height: '60%', width: 1 }} />}
             <FadeIn delay={200}>
-              <div style={{ border: '1px solid var(--rose20)', padding: '36px 32px', background: 'var(--wht)', borderRadius: 8 }}>
-                <EyR text="Mobiliário" />
+              <div style={{ border: '1px solid var(--blue20)', padding: '36px 32px', background: 'var(--wht)', borderRadius: 8 }}>
+                <EyB text="Mobiliário" />
                 {[{ n: '12', l: 'Mesas Redondas' }, { n: '4', l: 'Mesas Retangulares' }, { n: '116', l: 'Cadeiras' }, { n: '2', l: 'Sofás' }, { n: '10', l: 'Poltronas' }].map((item, i) => (
-                  <div key={i} style={{ display: 'flex', alignItems: 'baseline', gap: 16, padding: '12px 0', borderBottom: i < 4 ? '1px solid var(--rose10)' : 'none' }}>
-                    <span style={{ fontFamily: "'Playfair Display',serif", fontSize: 34, fontWeight: 400, color: 'var(--rose)', lineHeight: 1, minWidth: 56 }}>{item.n}</span>
+                  <div key={i} style={{ display: 'flex', alignItems: 'baseline', gap: 16, padding: '12px 0', borderBottom: i < 4 ? '1px solid var(--blue10)' : 'none' }}>
+                    <span style={{ fontFamily: "'Playfair Display',serif", fontSize: 34, fontWeight: 400, color: 'var(--blue)', lineHeight: 1, minWidth: 56 }}>{item.n}</span>
                     <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 13, fontWeight: 600, letterSpacing: '.15em', textTransform: 'uppercase', color: 'var(--txts)' }}>{item.l}</span>
                   </div>
                 ))}
@@ -446,10 +446,10 @@ export default function App() {
           <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1.3fr', gap: isMobile ? 40 : 72 }}>
             <FadeIn>
               <div>
-                <EyR text="Gastronomia de Alto Nível" />
+                <EyB text="Gastronomia de Alto Nível" />
                 <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: 'clamp(26px,3vw,42px)', fontWeight: 700, color: 'var(--txt)', lineHeight: 1.12, marginBottom: 6 }}>Buffet próprio,</h2>
-                <h2 style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 'clamp(26px,3vw,42px)', fontStyle: 'italic', fontWeight: 400, color: 'var(--rose)', lineHeight: 1.12 }}>sabor de verdade.</h2>
-                <RuleR />
+                <h2 style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 'clamp(26px,3vw,42px)', fontStyle: 'italic', fontWeight: 400, color: 'var(--blue)', lineHeight: 1.12 }}>sabor de verdade.</h2>
+                <div style={{ width: 56, height: 2, background: 'linear-gradient(90deg,var(--blue),transparent)', margin: '18px 0', borderRadius: 2 }} />
                 <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 15, fontWeight: 300, color: 'var(--txts)', lineHeight: 1.9, marginBottom: 32 }}>
                   Nosso buffet é inteiramente próprio — desenvolvido para atender tanto os pequenos quanto os adultos com excelência, variedade e apresentação impecável.
                 </p>
@@ -499,7 +499,7 @@ export default function App() {
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 0 }}>
                   {['Área Baby', 'Tobogã', 'Piscina de Bolinha', 'Cama Elástica Suspensa', 'Simuladores', 'Mini Mercado', 'Mini Cozinha', 'Torre Espacial', 'Formigueiro', 'Circuito Brinquedão', 'Video Games'].map((toy, i) => (
                     <div key={i} className="kids-item">
-                      <span style={{ width: 6, height: 6, borderRadius: '50%', background: 'var(--gold)', flexShrink: 0, marginRight: 10 }} />{toy}
+                      <span style={{ width: 6, height: 6, borderRadius: '50%', background: i % 2 === 0 ? 'var(--rose)' : 'var(--blue)', flexShrink: 0, marginRight: 10 }} />{toy}
                     </div>
                   ))}
                 </div>
