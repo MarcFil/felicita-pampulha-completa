@@ -199,7 +199,7 @@ export default function App() {
 
       {/* S1 HERO */}
       <section id="hero" className="spread" style={{ height: isMobile ? '90vh' : '130vh' }}>
-        <img className="spread-img" src="/images/hero-infantil.jpg" alt="Festa Infantil Espaço Felicitá" style={{ objectPosition: 'center center', top: isMobile ? '0%' : '-15%' }} />
+        <img className="spread-img" src="/images/hero.png" alt="Festa Infantil Espaço Felicitá" style={{ objectPosition: 'center center', top: isMobile ? '0%' : '-15%' }} />
         <div className="spread-veil" />
         <div style={{ position: 'absolute', inset: 0, zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '0 24px' }}>
           <FadeIn delay={200}>
@@ -224,7 +224,7 @@ export default function App() {
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1.2fr', gap: isMobile ? 40 : 80, alignItems: 'center' }}>
             <FadeIn>
-              <Frame src="/images/essence-infantil.jpg" alt="Celebração infantil" style={{ aspectRatio: '4/5' }} imgStyle={{ objectPosition: 'center 30%' }} />
+              <Frame src="/images/essence.png" alt="Celebração infantil" style={{ aspectRatio: '4/5' }} imgStyle={{ objectPosition: 'center 30%' }} />
             </FadeIn>
             <div>
               <FadeIn>
@@ -263,7 +263,7 @@ export default function App() {
 
       {/* S3 SPREAD 1 */}
       <section className="spread" style={{ height: isMobile ? '70vh' : '85vh' }}>
-        <img className="spread-img" src="/images/spread-1-infantil.jpg" alt="Festa infantil Felicitá" style={{ objectPosition: 'center center', top: isMobile ? '0%' : '-15%' }} />
+        <img className="spread-img" src="/images/spread-1.png" alt="Festa infantil Felicitá" style={{ objectPosition: 'center center', top: isMobile ? '0%' : '-15%' }} />
         <div className="spread-veil" />
         <div style={{ position: 'absolute', top: 24, right: 32, zIndex: 20 }}><LogoDark height={44} /></div>
         <div style={{ position: 'absolute', bottom: isMobile ? 60 : 100, left: isMobile ? 24 : 56, right: isMobile ? 24 : 56, zIndex: 20 }}>
@@ -307,7 +307,7 @@ export default function App() {
               ))}
             </div>
             <FadeIn delay={200}>
-              <Frame src="/images/team-infantil.jpg" alt="Equipe Felicitá" style={{ aspectRatio: '4/5' }} imgStyle={{ objectPosition: 'center 20%' }} />
+              <Frame src="/images/team.jpg" alt="Equipe Felicitá" style={{ aspectRatio: '4/5' }} imgStyle={{ objectPosition: 'center 20%' }} />
             </FadeIn>
           </div>
         </div>
@@ -363,7 +363,7 @@ export default function App() {
           </FadeIn>
           <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1px 1fr', gap: 48, alignItems: 'center' }}>
             <FadeIn>
-              <Frame src="/images/ambiance-infantil.jpg" alt="Salão decorado" style={{ aspectRatio: '3/4' }} imgStyle={{ objectPosition: 'center 35%' }} />
+              <Frame src="/images/ambiance.png" alt="Salão decorado" style={{ aspectRatio: '3/4' }} imgStyle={{ objectPosition: 'center 35%' }} />
             </FadeIn>
             {!isMobile && <div style={{ background: 'var(--blue20)', height: '60%', width: 1 }} />}
             <FadeIn delay={200}>
@@ -383,7 +383,7 @@ export default function App() {
 
       {/* S7 SPREAD 2 */}
       <section className="spread" style={{ height: isMobile ? '72vh' : '110vh' }}>
-        <img className="spread-img" src="/images/spread-2-infantil.jpg" alt="Celebração infantil" style={{ objectPosition: 'center center', top: isMobile ? '0%' : '-15%' }} />
+        <img className="spread-img" src="/images/spread-2.png" alt="Celebração infantil" style={{ objectPosition: 'center center', top: isMobile ? '0%' : '-15%' }} />
         <div className="spread-veil" />
         <div style={{ position: 'absolute', top: 24, right: 32, zIndex: 20 }}><LogoDark height={44} /></div>
         <div style={{ position: 'absolute', bottom: isMobile ? 40 : 100, left: isMobile ? 24 : 56, right: isMobile ? 24 : 56, zIndex: 20 }}>
@@ -420,7 +420,7 @@ export default function App() {
               </FadeIn>
             </div>
             <FadeIn delay={150}>
-              <Frame src="/images/celebration-infantil.jpg" alt="Celebração" style={{ aspectRatio: '4/5' }} imgStyle={{ objectPosition: 'center 30%' }} />
+              <Frame src="/images/celebration.png" alt="Celebração" style={{ aspectRatio: '4/5' }} imgStyle={{ objectPosition: 'center 30%' }} />
             </FadeIn>
           </div>
         </div>
@@ -428,7 +428,7 @@ export default function App() {
 
       {/* S9 SPREAD 3 */}
       <section className="spread" style={{ height: isMobile ? '72vh' : '110vh' }}>
-        <img src="/images/spread-3-infantil.jpg" alt="Momento especial" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center' }} />
+        <img src="/images/spread-3.png" alt="Momento especial" style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center center' }} />
         <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg,rgba(0,0,0,.2) 0%,rgba(0,0,0,.3) 45%,rgba(0,0,0,.78) 100%)' }} />
         <div style={{ position: 'absolute', top: 24, right: 32, zIndex: 20 }}><LogoDark height={44} /></div>
         <div style={{ position: 'absolute', bottom: isMobile ? 32 : 56, left: isMobile ? 24 : 56, right: isMobile ? 24 : 56, zIndex: 20 }}>
@@ -483,7 +483,7 @@ export default function App() {
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: isMobile ? 40 : 72, alignItems: 'center' }}>
             <FadeIn>
-              <Frame src="/images/kids-infantil.jpg" alt="Espaço Kids" style={{ aspectRatio: '4/5' }} imgStyle={{ objectPosition: 'center 25%' }} />
+              <Frame src="/images/kids.jpg" alt="Espaço Kids" style={{ aspectRatio: '4/5' }} imgStyle={{ objectPosition: 'center 25%' }} />
             </FadeIn>
             <div>
               <FadeIn>
