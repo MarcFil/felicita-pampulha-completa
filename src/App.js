@@ -354,8 +354,8 @@ export default function App() {
             <FadeIn delay={200}>
               <div style={{ border: '1px solid var(--blue20)', padding: '36px 32px', background: 'var(--wht)', borderRadius: 8 }}>
                 <EyB text="Mobiliário" />
-                {[{ n: '12', l: 'Mesas Redondas' }, { n: '2', l: 'Mesas da Família' }, { n: '96', l: 'Cadeiras' }, { n: '10', l: 'Cadeiras Luís XV' }, { n: '2', l: 'Sofás de 4 Lugares' }, { n: '5', l: 'Poltronas' }].map((item, i) => (
-                  <div key={i} style={{ display: 'flex', alignItems: 'baseline', gap: 16, padding: '12px 0', borderBottom: i < 5 ? '1px solid var(--blue10)' : 'none' }}>
+                {[{ n: '9', l: 'Mesas Redondas' }, { n: '2', l: 'Mesas da Família' }, { n: '3', l: 'Mesas Quadradas' }, { n: '3', l: 'Mesas Bistrô' }, { n: '12', l: 'Poltronas' }, { n: '2', l: 'Sofás de 4 Lugares' }, { n: '4', l: 'Cadeiras Luís XV' }, { n: '100', l: 'Cadeiras' }].map((item, i) => (
+                  <div key={i} style={{ display: 'flex', alignItems: 'baseline', gap: 16, padding: '12px 0', borderBottom: i < 7 ? '1px solid var(--blue10)' : 'none' }}>
                     <span style={{ fontFamily: "'Playfair Display',serif", fontSize: 34, fontWeight: 400, color: 'var(--blue)', lineHeight: 1, minWidth: 56 }}>{item.n}</span>
                     <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 13, fontWeight: 600, letterSpacing: '.15em', textTransform: 'uppercase', color: 'var(--txts)' }}>{item.l}</span>
                   </div>
@@ -594,7 +594,7 @@ export default function App() {
           <div style={{ borderTop:'.5px solid rgba(44,44,44,.8)', paddingTop:36, display:'flex', flexDirection:'column', alignItems:'center', gap:16, width:'100%', maxWidth:520 }}>
             <span style={{ fontFamily:"'Montserrat',sans-serif", fontSize:12, fontWeight:600, letterSpacing:'.4em', textTransform:'uppercase', color:'rgba(250,250,250,.28)' }}>Conheça também nossas casas</span>
             <div style={{ display:'flex', flexDirection: isMobile ? 'column' : 'row', gap: isMobile ? 12 : 40, alignItems:'center', fontFamily:"'Cormorant Garamond',serif", fontStyle:'italic', fontSize:28, color:'var(--gold2)' }}>
-              <span style={{ whiteSpace:'nowrap' }}>Felicitá Cidade Nova</span>
+              <span style={{ whiteSpace:'nowrap' }}>Felicitá Palmares</span>
               {!isMobile && <span style={{ color:'rgba(201,168,76,.3)' }}>·</span>}
               <span style={{ whiteSpace:'nowrap' }}>Felicitá Pampulha</span>
             </div>
