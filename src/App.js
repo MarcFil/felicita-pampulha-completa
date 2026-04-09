@@ -560,7 +560,8 @@ export default function App() {
             <div style={{ marginTop:28, display:'flex', flexDirection:'column', gap:8, alignItems:'center' }}>
               <span style={{ fontFamily:"'Montserrat',sans-serif", fontSize:10, fontWeight:500, letterSpacing:'.3em', textTransform:'uppercase', color:'var(--gold)', border:'.5px solid rgba(201,168,76,.2)', padding:'8px 20px', display:'inline-block' }}>Formas de pagamento a combinar</span>
               <p style={{ fontFamily:"'Cormorant Garamond',serif", fontStyle:'italic', fontSize:14, color:'rgba(250,250,250,.38)', textAlign:'center', lineHeight:1.7 }}>
-                * Esta proposta tem validade de 5 dias e não garante reserva de data.
+                * Esta proposta tem validade de 5 dias e não garante reserva de data.<br />
+                * Para eventos realizados no sábado à noite, mínimo de 150 convidados.
               </p>
             </div>
           </FadeIn>
