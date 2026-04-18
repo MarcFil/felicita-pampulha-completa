@@ -359,8 +359,8 @@ export default function App() {
               ))}
             </div>
             <FadeIn delay={200}>
-              <div style={{ position: 'relative', borderRadius: 4, overflow: 'hidden', aspectRatio: '9/16' }}>
-                <AutoVideo src="/videos/team.mp4" className="ambient-video" style={{ width: '100%', height: '100%', objectFit: 'cover', aspectRatio: '9/16' }} withAudio />
+              <div style={{ position: 'relative', borderRadius: 4, overflow: 'hidden', width: '100%', height: isMobile ? 480 : 600 }}>
+                <AutoVideo src="/videos/team.mp4" withAudio style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
               </div>
             </FadeIn>
           </div>
@@ -682,9 +682,19 @@ export default function App() {
                 <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: 'clamp(26px,3vw,42px)', fontWeight: 700, color: 'var(--txt)', lineHeight: 1.12, marginBottom: 6 }}>Buffet próprio,</h2>
                 <h2 style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 'clamp(26px,3vw,42px)', fontStyle: 'italic', fontWeight: 400, color: 'var(--rose)', lineHeight: 1.12 }}>sabor de verdade.</h2>
                 <RuleR />
-                <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 15, fontWeight: 300, color: 'var(--txts)', lineHeight: 1.9, marginBottom: 32 }}>
+                <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 15, fontWeight: 300, color: 'var(--txts)', lineHeight: 1.9, marginBottom: 24 }}>
                   Nosso buffet é inteiramente próprio — desenvolvido para atender todos os convidados com excelência, variedade e apresentação impecável.
                 </p>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10, marginTop: 8 }}>
+                  <div className="photo-frame" style={{ aspectRatio: '4/3' }}>
+                    <div className="photo-frame-border" />
+                    <img src="/images/buffet-1.jpg" alt="Buffet Felicitá" style={{ objectPosition: 'center center' }} />
+                  </div>
+                  <div className="photo-frame" style={{ aspectRatio: '4/3' }}>
+                    <div className="photo-frame-border" />
+                    <img src="/images/buffet-2.jpg" alt="Buffet Felicitá" style={{ objectPosition: 'center center' }} />
+                  </div>
+                </div>
               </div>
             </FadeIn>
             <FadeIn delay={200}>
