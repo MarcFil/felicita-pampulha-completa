@@ -192,7 +192,7 @@ const TeamVideo = () => {
           <img
             src="/images/team-thumb.png"
             alt="Equipe Felicitá"
-            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+            style={{ width: '100%', height: '100%', objectFit: 'contain', display: 'block', background: '#0A0A0A' }}
           />
           <div
             onClick={() => setStarted(true)}
