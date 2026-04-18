@@ -146,26 +146,29 @@ const FadeIn = ({ children, delay = 0 }) => {
 };
 
 // Auto-play video on intersection
-const AutoVideo = ({ src, style: s = {}, className = '' }) => {
+const AutoVideo = ({ src, style: s = {}, className = '', withAudio = false }) => {
   const ref = useRef(null);
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
     const obs = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) el.play().catch(() => {}); else el.pause(); },
+      ([e]) => {
+        if (e.isIntersecting) { el.play().catch(() => {}); }
+        else { el.pause(); if (!withAudio) el.currentTime = 0; }
+      },
       { threshold: 0.3 }
     );
     obs.observe(el);
     return () => obs.disconnect();
-  }, []);
+  }, [withAudio]);
   return (
     <video
       ref={ref}
       src={src}
       className={className}
       style={s}
-      muted
-      loop
+      muted={!withAudio}
+      loop={!withAudio}
       playsInline
       preload="metadata"
     />
@@ -356,7 +359,9 @@ export default function App() {
               ))}
             </div>
             <FadeIn delay={200}>
-              <Frame src="/images/team.jpg" alt="Equipe Felicitá" style={{ aspectRatio: '4/5' }} imgStyle={{ objectPosition: 'center 20%' }} />
+              <div style={{ position: 'relative', borderRadius: 4, overflow: 'hidden', aspectRatio: '9/16' }}>
+                <AutoVideo src="/videos/team.mp4" className="ambient-video" style={{ width: '100%', height: '100%', objectFit: 'cover', aspectRatio: '9/16' }} withAudio />
+              </div>
             </FadeIn>
           </div>
         </div>
