@@ -227,10 +227,17 @@ export default function App() {
       <section id="hero" style={{ position: 'relative', height: isMobile ? '100svh' : '130vh', overflow: 'hidden' }}>
         <div className="hero-video-wrap">
           <video
+            ref={el => {
+              if (!el) return;
+              el.muted = true;
+              el.playsInline = true;
+              const tryPlay = () => el.play().catch(() => {});
+              el.addEventListener('ended', tryPlay);
+              el.addEventListener('pause', () => { if (!el.ended) tryPlay(); });
+              tryPlay();
+            }}
             src="/videos/hero.mp4"
-            autoPlay
             muted
-            loop
             playsInline
             preload="auto"
             style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', minWidth: '100%', minHeight: '100%', width: 'auto', height: 'auto', objectFit: 'cover' }}
@@ -370,7 +377,7 @@ export default function App() {
                 </p>
               </div>
             </FadeIn>
-            <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: 12 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
               {[
                 { t: 'Capacidade', v: '230', s: 'convidados' },
                 { t: 'Exclusividade', v: 'Sala VIP', s: 'para os anfitriões' },
