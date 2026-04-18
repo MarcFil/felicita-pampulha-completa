@@ -250,16 +250,18 @@ export default function App() {
               </p>
             </FadeIn>
           )}
-          <FadeIn delay={450}>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: isMobile ? 14 : 32 }}>
-              {['230 convidados', 'Buffet próprio', 'Ambientes exclusivos', 'Somente domingos'].map((pill, i) => (
-                <span key={i} style={{ fontFamily: "'Montserrat',sans-serif", fontSize: isMobile ? 10 : 11, fontWeight: 600, color: 'rgba(255,255,255,.5)', background: 'rgba(255,255,255,.06)', border: '1px solid rgba(255,255,255,.1)', padding: isMobile ? '5px 10px' : '6px 14px', borderRadius: 999, display: 'flex', alignItems: 'center', gap: 6 }}>
-                  <span style={{ width: 4, height: 4, borderRadius: '50%', background: i % 2 === 0 ? 'var(--gold)' : 'var(--rose)', flexShrink: 0 }} />
-                  {pill}
-                </span>
-              ))}
-            </div>
-          </FadeIn>
+          {!isMobile && (
+            <FadeIn delay={450}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 32 }}>
+                {['230 convidados', 'Buffet próprio', 'Ambientes exclusivos', 'Somente domingos'].map((pill, i) => (
+                  <span key={i} style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 11, fontWeight: 600, color: 'rgba(255,255,255,.5)', background: 'rgba(255,255,255,.06)', border: '1px solid rgba(255,255,255,.1)', padding: '6px 14px', borderRadius: 999, display: 'flex', alignItems: 'center', gap: 6 }}>
+                    <span style={{ width: 4, height: 4, borderRadius: '50%', background: i % 2 === 0 ? 'var(--gold)' : 'var(--rose)', flexShrink: 0 }} />
+                    {pill}
+                  </span>
+                ))}
+              </div>
+            </FadeIn>
+          )}
         </div>
       </section>
 
