@@ -181,6 +181,7 @@ const TeamVideo = () => {
     <div style={{ position: 'relative', width: '100%', aspectRatio: '9/16', borderRadius: 4, overflow: 'hidden', background: '#000' }}>
       {started ? (
         <iframe
+          title="Equipe Felicitá Pampulha"
           src="https://www.youtube.com/embed/5038gNSMQTg?autoplay=1&mute=0&playsinline=1&rel=0&controls=1"
           allow="autoplay; fullscreen"
           allowFullScreen
