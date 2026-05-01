@@ -238,7 +238,7 @@ export default function App() {
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
           <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1.2fr', gap: isMobile ? 48 : 88, alignItems: 'center' }}>
             <FadeIn>
-              <Frame src="/images/essence.png" alt="Casamento Espaço Felicitá Pampulha" style={{ aspectRatio: '4/5' }} imgStyle={{ objectPosition: 'center 30%' }} />
+              <Frame src="/images/essence.jpg" alt="Casamento Espaço Felicitá Pampulha" style={{ aspectRatio: '4/5' }} imgStyle={{ objectPosition: 'center 30%' }} />
             </FadeIn>
             <div>
               <FadeIn>
