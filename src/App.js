@@ -423,72 +423,27 @@ export default function App() {
       </section>
 
       {/* SA SPREAD ADULTO */}
-      <section className="spread" style={{ height: isMobile ? '72vh' : '88vh' }}>
+      <section className="spread" style={{ height: isMobile ? '70vh' : '85vh' }}>
         <img className="spread-img" src="/images/spread-2.png" alt="Festa Adulto Felicitá Pampulha" style={{ objectPosition: 'center center' }} />
         <div className="spread-veil" />
         <div style={{ position: 'absolute', top: 24, right: 32, zIndex: 20 }}><LogoLight height={44} /></div>
-        <div style={{ position: 'absolute', bottom: isMobile ? 48 : 88, left: isMobile ? 24 : 64, right: isMobile ? 24 : 64, zIndex: 20 }}>
+        <div style={{ position: 'absolute', bottom: isMobile ? 48 : 80, left: isMobile ? 24 : 64, zIndex: 20 }}>
           <FadeIn>
-            <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 9, fontWeight: 700, letterSpacing: '.5em', textTransform: 'uppercase', color: 'var(--gold)', border: '1px solid var(--gold50)', padding: '5px 18px', borderRadius: 999, display: 'inline-block', marginBottom: 24 }}>Festa Adulto</span>
-            <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: isMobile ? 'clamp(28px,8vw,44px)' : 'clamp(44px,5.5vw,72px)', fontWeight: 700, color: '#FFFFFF', lineHeight: 1.06, marginBottom: 16, maxWidth: 760 }}>
-              Uma celebração à<br /><span style={{ color: 'var(--gold2)', fontStyle: 'italic' }}>altura de quem você é.</span>
-            </h2>
-            {!isMobile && (
-              <p style={{ fontFamily: "'Cormorant Garamond',serif", fontStyle: 'italic', fontSize: 21, color: 'rgba(255,255,255,.6)', lineHeight: 1.8, maxWidth: 560 }}>
-                Sofisticação, elegância e a liberdade de celebrar do seu jeito — em um ambiente que eleva cada momento da noite.
-              </p>
-            )}
+            <p style={{ fontFamily: "'Cormorant Garamond',serif", fontStyle: 'italic', fontSize: isMobile ? 18 : 22, fontWeight: 300, color: 'rgba(255,255,255,.75)', marginBottom: 8 }}>uma celebração à altura</p>
+            <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: isMobile ? 'clamp(26px,7vw,36px)' : 'clamp(34px,3.5vw,48px)', fontWeight: 700, color: '#FFFFFF', lineHeight: 1.1 }}>De Quem Você É</h2>
           </FadeIn>
         </div>
       </section>
 
       {/* SB SPREAD 15 ANOS */}
-      <section className="spread" style={{ height: isMobile ? '72vh' : '88vh' }}>
+      <section className="spread" style={{ height: isMobile ? '70vh' : '85vh' }}>
         <img className="spread-img" src="/images/spread-3.png" alt="Festa 15 Anos Felicitá Pampulha" style={{ objectPosition: 'center center' }} />
         <div className="spread-veil" />
-        <div style={{ position: 'absolute', bottom: isMobile ? 48 : 88, left: isMobile ? 24 : 64, right: isMobile ? 24 : 64, zIndex: 20 }}>
+        <div style={{ position: 'absolute', bottom: isMobile ? 48 : 80, left: isMobile ? 24 : 64, zIndex: 20 }}>
           <FadeIn>
-            <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 9, fontWeight: 700, letterSpacing: '.5em', textTransform: 'uppercase', color: 'var(--gold)', border: '1px solid var(--gold50)', padding: '5px 18px', borderRadius: 999, display: 'inline-block', marginBottom: 24 }}>Festa de 15 Anos</span>
-            <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: isMobile ? 'clamp(26px,7vw,42px)' : 'clamp(44px,5.5vw,72px)', fontWeight: 700, color: '#FFFFFF', lineHeight: 1.06, marginBottom: 16, maxWidth: 820 }}>
-              O dia mais esperado<br /><span style={{ color: 'var(--gold2)', fontStyle: 'italic' }}>merece o espaço mais especial.</span>
-            </h2>
-            {!isMobile && (
-              <p style={{ fontFamily: "'Cormorant Garamond',serif", fontStyle: 'italic', fontSize: 21, color: 'rgba(255,255,255,.6)', lineHeight: 1.8, maxWidth: 560 }}>
-                Um cenário deslumbrante, uma equipe dedicada e a emoção que apenas um grande espaço é capaz de proporcionar — para que a debutante viva cada instante com protagonismo absoluto.
-              </p>
-            )}
+            <p style={{ fontFamily: "'Cormorant Garamond',serif", fontStyle: 'italic', fontSize: isMobile ? 18 : 22, fontWeight: 300, color: 'rgba(255,255,255,.75)', marginBottom: 8 }}>o dia mais esperado da sua vida</p>
+            <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: isMobile ? 'clamp(26px,7vw,36px)' : 'clamp(34px,3.5vw,48px)', fontWeight: 700, color: '#FFFFFF', lineHeight: 1.1 }}>Realizado Como Você Sonhou</h2>
           </FadeIn>
-        </div>
-      </section>
-
-      {/* S6 MOBILIÁRIO */}
-      <section style={{ background: 'var(--cream)', padding: isMobile ? '72px 24px' : '96px 64px' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <FadeIn>
-            <div style={{ textAlign: 'center', marginBottom: 56 }}>
-              <Eyebrow text="Ambientação & Conforto" center />
-              <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: 'clamp(28px,3vw,44px)', fontWeight: 700, color: 'var(--txt)', lineHeight: 1.1, marginBottom: 8 }}>Conforto e estilo</h2>
-              <h2 style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 'clamp(28px,3vw,44px)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gold3)', lineHeight: 1.1 }}>em cada ambiente.</h2>
-              <Rule center />
-            </div>
-          </FadeIn>
-          <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1px 1fr', gap: 56, alignItems: 'center' }}>
-            <FadeIn>
-              <Frame src="/images/ambiance.png" alt="Salão decorado" style={{ aspectRatio: '3/4' }} imgStyle={{ objectPosition: 'center 35%' }} />
-            </FadeIn>
-            {!isMobile && <div style={{ background: 'var(--gold20)', height: '60%', width: 1 }} />}
-            <FadeIn delay={200}>
-              <div style={{ border: '1px solid var(--gold20)', padding: '36px 32px', background: 'var(--wht)', borderRadius: 4 }}>
-                <Eyebrow text="Mobiliário" />
-                {[{ n: '15', l: 'Mesas Redondas' }, { n: '02', l: 'Mesas da Família' }, { n: '03', l: 'Mesas Baixas com 3 Poltronas cada' }].map((item, i) => (
-                  <div key={i} style={{ display: 'flex', alignItems: 'baseline', gap: 18, padding: '16px 0', borderBottom: i < 2 ? '1px solid var(--gold10)' : 'none' }}>
-                    <span style={{ fontFamily: "'Playfair Display',serif", fontSize: 38, fontWeight: 400, color: 'var(--gold)', lineHeight: 1, minWidth: 60 }}>{item.n}</span>
-                    <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 12, fontWeight: 600, letterSpacing: '.18em', textTransform: 'uppercase', color: 'var(--txts)' }}>{item.l}</span>
-                  </div>
-                ))}
-              </div>
-            </FadeIn>
-          </div>
         </div>
       </section>
 
@@ -526,39 +481,43 @@ export default function App() {
       {/* S9 GASTRONOMIA */}
       <section id="gastronomia" style={{ background: 'var(--cream)', padding: isMobile ? '72px 24px' : '96px 64px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1.3fr', gap: isMobile ? 48 : 80 }}>
-            <FadeIn>
-              <div>
-                <Eyebrow text="Gastronomia de Alto Nível" />
-                <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: 'clamp(28px,3vw,44px)', fontWeight: 700, color: 'var(--txt)', lineHeight: 1.1, marginBottom: 8 }}>Buffet próprio,</h2>
-                <h2 style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 'clamp(28px,3vw,44px)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gold3)', lineHeight: 1.1 }}>sabor de verdade.</h2>
-                <Rule />
-                <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 15, fontWeight: 300, color: 'var(--txts)', lineHeight: 2, marginBottom: 32 }}>
-                  Nosso buffet é inteiramente próprio — desenvolvido para atender todos os convidados com excelência, variedade e apresentação impecável.
-                </p>
-              </div>
-            </FadeIn>
-            <FadeIn delay={200}>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
-                <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 11, fontWeight: 600, color: 'var(--txts)', marginBottom: 20, letterSpacing: '.08em' }}>
-                  *Ítens opcionais — composição definida conforme o pacote contratado.
-                </p>
-                {[
-                  { t: 'Jantar completo *', d: 'Pratos quentes, saladas, carnes e acompanhamentos' },
-                  { t: 'Mesa de frios *', d: 'Queijos, embutidos e acompanhamentos selecionados' },
-                  { t: 'Massa ao vivo *', d: 'Preparo artesanal na frente dos convidados, com variedade de molhos e acompanhamentos' },
-                  { t: 'Bar completo *', d: 'Bebidas alcoólicas, sucos, refrigerantes e água' },
-                ].map((item, i) => (
-                  <FadeIn delay={i * 60} key={i}>
-                    <div className="buffet-row">
-                      <h5 style={{ fontFamily: "'Playfair Display',serif", fontSize: 16, fontWeight: 500, color: 'var(--txt)', minWidth: 210, marginBottom: isMobile ? 4 : 0 }}>{item.t}</h5>
-                      <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 13, fontWeight: 300, color: 'var(--txts)', lineHeight: 1.7 }}>{item.d}</p>
-                    </div>
-                  </FadeIn>
-                ))}
-              </div>
-            </FadeIn>
-          </div>
+          <FadeIn>
+            <div style={{ textAlign: 'center', marginBottom: 56 }}>
+              <Eyebrow text="Gastronomia de Alto Nível" center />
+              <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: 'clamp(28px,3vw,44px)', fontWeight: 700, color: 'var(--txt)', lineHeight: 1.1, marginBottom: 8 }}>Buffet próprio,</h2>
+              <h2 style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 'clamp(28px,3vw,44px)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gold3)', lineHeight: 1.1 }}>sabor de verdade.</h2>
+              <Rule center />
+              <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 15, fontWeight: 300, color: 'var(--txts)', lineHeight: 2, maxWidth: 560, margin: '16px auto 0' }}>
+                Nosso buffet é inteiramente próprio — desenvolvido para atender todos os convidados com excelência, variedade e apresentação impecável.
+              </p>
+            </div>
+          </FadeIn>
+          <FadeIn delay={100}>
+            <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: 12, marginBottom: 56 }}>
+              <Frame src="/images/buffet-1.jpg" alt="Buffet Felicitá" style={{ aspectRatio: '4/3' }} imgStyle={{ objectPosition: 'center center' }} />
+              <Frame src="/images/buffet-2.jpg" alt="Buffet Felicitá" style={{ aspectRatio: '4/3' }} imgStyle={{ objectPosition: 'center center' }} />
+            </div>
+          </FadeIn>
+          <FadeIn delay={200}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 0, maxWidth: 800, margin: '0 auto' }}>
+              <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 11, fontWeight: 600, color: 'var(--txts)', marginBottom: 20, letterSpacing: '.08em' }}>
+                *Ítens opcionais — composição definida conforme o pacote contratado.
+              </p>
+              {[
+                { t: 'Jantar completo *', d: 'Pratos quentes, saladas, carnes e acompanhamentos' },
+                { t: 'Mesa de frios *', d: 'Queijos, embutidos e acompanhamentos selecionados' },
+                { t: 'Massa ao vivo *', d: 'Preparo artesanal na frente dos convidados, com variedade de molhos e acompanhamentos' },
+                { t: 'Bar completo *', d: 'Bebidas alcoólicas, sucos, refrigerantes e água' },
+              ].map((item, i) => (
+                <FadeIn delay={i * 60} key={i}>
+                  <div className="buffet-row">
+                    <h5 style={{ fontFamily: "'Playfair Display',serif", fontSize: 16, fontWeight: 500, color: 'var(--txt)', minWidth: 210, marginBottom: isMobile ? 4 : 0 }}>{item.t}</h5>
+                    <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 13, fontWeight: 300, color: 'var(--txts)', lineHeight: 1.7 }}>{item.d}</p>
+                  </div>
+                </FadeIn>
+              ))}
+            </div>
+          </FadeIn>
         </div>
       </section>
 
