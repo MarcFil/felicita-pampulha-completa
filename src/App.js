@@ -279,8 +279,8 @@ export default function App() {
         <div style={{ position: 'absolute', top: 24, right: 32, zIndex: 20 }}><LogoLight height={44} /></div>
         <div style={{ position: 'absolute', bottom: isMobile ? 48 : 80, left: isMobile ? 24 : 64, zIndex: 20 }}>
           <FadeIn>
-            <p style={{ fontFamily: "'Cormorant Garamond',serif", fontStyle: 'italic', fontSize: isMobile ? 18 : 22, fontWeight: 300, color: 'rgba(255,255,255,.75)', marginBottom: 8 }}>o único espaço em BH com</p>
-            <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: isMobile ? 'clamp(26px,7vw,36px)' : 'clamp(32px,3.2vw,46px)', fontWeight: 700, color: '#FFFFFF', lineHeight: 1.1 }}>Cerimônia ao Ar Livre</h2>
+            <p style={{ fontFamily: "'Cormorant Garamond',serif", fontStyle: 'italic', fontSize: isMobile ? 18 : 22, fontWeight: 300, color: 'rgba(255,255,255,.75)', marginBottom: 8 }}>onde a natureza se torna</p>
+            <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: isMobile ? 'clamp(26px,7vw,36px)' : 'clamp(32px,3.2vw,46px)', fontWeight: 700, color: '#FFFFFF', lineHeight: 1.1 }}>O Cenário da Sua Celebração</h2>
           </FadeIn>
         </div>
       </section>
@@ -357,57 +357,55 @@ export default function App() {
       {/* S5 ESTRUTURA */}
       <section id="estrutura" style={{ background: 'var(--cream2)', padding: isMobile ? '72px 24px' : '88px 64px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1.6fr', gap: isMobile ? 48 : 80, alignItems: 'start' }}>
-            <FadeIn>
-              <div>
-                <Eyebrow text="Estrutura & Exclusividade" />
-                <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: 'clamp(28px,3vw,44px)', fontWeight: 700, color: 'var(--txt)', lineHeight: 1.1, marginBottom: 8 }}>Detalhes que elevam</h2>
-                <h2 style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 'clamp(28px,3vw,44px)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gold3)', lineHeight: 1.1 }}>cada momento.</h2>
-                <Rule />
-                <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 15, fontWeight: 300, color: 'var(--txts)', lineHeight: 2, marginTop: 8 }}>
-                  A Unidade Pampulha foi concebida para ser o cenário perfeito de uma celebração única. Cada elemento foi escolhido com um único critério: a excelência.
-                </p>
-              </div>
-            </FadeIn>
-            <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: 10 }}>
-              {[
-                { t: 'Capacidade', v: '300', s: 'convidados' },
-                { t: 'Exclusividade', v: 'Sala VIP', s: 'para os anfitriões' },
-                { t: 'Conforto', v: 'Climatizado', s: 'todos os ambientes' },
-                { t: 'Elegância', v: 'Lustres', s: 'de cristal' },
-                { t: 'Segurança', v: 'Câmeras', s: 'circuito completo' },
-                { t: 'Palco', v: 'Estruturado', s: 'apresentações ao vivo' },
-                { t: 'Paisagismo', v: 'Exclusivo', s: 'projeto assinado' },
-                { t: 'Acessibilidade', v: 'Completa', s: 'todos os ambientes' },
-                { t: 'Quarto da Noiva', v: 'Privativo', s: 'preparação exclusiva' },
-                { t: 'Quarto do Noivo', v: 'Privativo', s: 'lounge exclusivo' },
-                { t: 'Estacionamento', v: 'Reservado', s: 'aos anfitriões do evento' },
-                { t: 'Área Externa', v: 'Exclusiva', s: 'cerimônias ao ar livre' },
-              ].map((c, i) => (
-                <FadeIn delay={i * 45} key={i}>
-                  <div className="diff-card">
-                    <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 9, fontWeight: 700, letterSpacing: '.32em', textTransform: 'uppercase', color: 'var(--gold3)', display: 'block', marginBottom: 10 }}>{c.t}</span>
-                    <span style={{ fontFamily: "'Playfair Display',serif", fontSize: 22, fontWeight: 500, color: 'var(--txt)', display: 'block', lineHeight: 1.1, marginBottom: 4 }}>{c.v}</span>
-                    <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 12, fontWeight: 300, color: 'var(--txts)' }}>{c.s}</span>
-                  </div>
-                </FadeIn>
-              ))}
-              <FadeIn delay={600}>
-                <div className="vip-card" style={{ gridColumn: '1 / -1' }}>
-                  <Eyebrow text="Sala VIP" />
-                  <h5 style={{ fontFamily: "'Playfair Display',serif", fontSize: 20, fontWeight: 500, color: 'var(--gold)', marginBottom: 10 }}>Ambiente reservado para momentos exclusivos</h5>
-                  <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 14, fontWeight: 300, color: 'var(--txts)', lineHeight: 1.9, marginBottom: 20 }}>
-                    Espaço privativo com decoração refinada, iluminação especial e serviço dedicado — para quem deseja um momento à parte durante a celebração.
-                  </p>
-                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
-                    {['Acesso exclusivo', 'Decoração diferenciada', 'Serviço personalizado', 'Ambiente climatizado', 'Iluminação especial'].map((item, i) => (
-                      <span key={i} style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 11, fontWeight: 500, color: 'var(--gold3)', background: 'var(--gold10)', border: '1px solid var(--gold20)', padding: '4px 14px', borderRadius: 999 }}>{item}</span>
-                    ))}
-                  </div>
+          <FadeIn>
+            <div style={{ maxWidth: 560, marginBottom: 56 }}>
+              <Eyebrow text="Estrutura & Exclusividade" />
+              <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: 'clamp(28px,3vw,44px)', fontWeight: 700, color: 'var(--txt)', lineHeight: 1.1, marginBottom: 8 }}>Detalhes que elevam</h2>
+              <h2 style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 'clamp(28px,3vw,44px)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gold3)', lineHeight: 1.1 }}>cada momento.</h2>
+              <Rule />
+              <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 15, fontWeight: 300, color: 'var(--txts)', lineHeight: 2, marginTop: 8 }}>
+                A Unidade Pampulha foi concebida para ser o cenário perfeito de uma celebração única. Cada elemento foi escolhido com um único critério: a excelência.
+              </p>
+            </div>
+          </FadeIn>
+          <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)', gap: 10, marginBottom: 10 }}>
+            {[
+              { t: 'Capacidade', v: '300', s: 'convidados' },
+              { t: 'Exclusividade', v: 'Sala VIP', s: 'para os anfitriões' },
+              { t: 'Conforto', v: 'Climatizado', s: 'todos os ambientes' },
+              { t: 'Elegância', v: 'Lustres', s: 'de cristal' },
+              { t: 'Segurança', v: 'Câmeras', s: 'circuito completo' },
+              { t: 'Palco', v: 'Estruturado', s: 'apresentações ao vivo' },
+              { t: 'Paisagismo', v: 'Exclusivo', s: 'projeto assinado' },
+              { t: 'Acessibilidade', v: 'Completa', s: 'todos os ambientes' },
+              { t: 'Quarto da Noiva', v: 'Privativo', s: 'preparação exclusiva' },
+              { t: 'Quarto do Noivo', v: 'Privativo', s: 'lounge exclusivo' },
+              { t: 'Estacionamento', v: 'Reservado', s: 'aos anfitriões do evento' },
+              { t: 'Área Externa', v: 'Exclusiva', s: 'cerimônias ao ar livre' },
+            ].map((c, i) => (
+              <FadeIn delay={i * 40} key={i}>
+                <div className="diff-card">
+                  <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 9, fontWeight: 700, letterSpacing: '.32em', textTransform: 'uppercase', color: 'var(--gold3)', display: 'block', marginBottom: 10 }}>{c.t}</span>
+                  <span style={{ fontFamily: "'Playfair Display',serif", fontSize: 22, fontWeight: 500, color: 'var(--txt)', display: 'block', lineHeight: 1.1, marginBottom: 4 }}>{c.v}</span>
+                  <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 12, fontWeight: 300, color: 'var(--txts)' }}>{c.s}</span>
                 </div>
               </FadeIn>
-            </div>
+            ))}
           </div>
+          <FadeIn delay={500}>
+            <div className="vip-card">
+              <Eyebrow text="Sala VIP" />
+              <h5 style={{ fontFamily: "'Playfair Display',serif", fontSize: 20, fontWeight: 500, color: 'var(--gold)', marginBottom: 10 }}>Ambiente reservado para momentos exclusivos</h5>
+              <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 14, fontWeight: 300, color: 'var(--txts)', lineHeight: 1.9, marginBottom: 20 }}>
+                Espaço privativo com decoração refinada, iluminação especial e serviço dedicado — para quem deseja um momento à parte durante a celebração.
+              </p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
+                {['Acesso exclusivo', 'Decoração diferenciada', 'Serviço personalizado', 'Ambiente climatizado', 'Iluminação especial'].map((item, i) => (
+                  <span key={i} style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 11, fontWeight: 500, color: 'var(--gold3)', background: 'var(--gold10)', border: '1px solid var(--gold20)', padding: '4px 14px', borderRadius: 999 }}>{item}</span>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -415,7 +413,6 @@ export default function App() {
       <section className="spread" style={{ height: isMobile ? '70vh' : '85vh' }}>
         <img className="spread-img" src="/images/spread-2.png" alt="Festa Adulto Felicitá Pampulha" style={{ objectPosition: 'center center' }} />
         <div className="spread-veil" />
-        <div style={{ position: 'absolute', top: 24, right: 32, zIndex: 20 }}><LogoLight height={44} /></div>
         <div style={{ position: 'absolute', bottom: isMobile ? 48 : 80, left: isMobile ? 24 : 64, zIndex: 20 }}>
           <FadeIn>
             <p style={{ fontFamily: "'Cormorant Garamond',serif", fontStyle: 'italic', fontSize: isMobile ? 18 : 22, fontWeight: 300, color: 'rgba(255,255,255,.75)', marginBottom: 8 }}>uma celebração à altura</p>
@@ -423,6 +420,9 @@ export default function App() {
           </FadeIn>
         </div>
       </section>
+
+      {/* SEPARADOR */}
+      <div style={{ height: 4, background: 'linear-gradient(90deg, var(--dark), var(--gold), var(--dark))' }} />
 
       {/* SB SPREAD 15 ANOS */}
       <section className="spread" style={{ height: isMobile ? '70vh' : '85vh' }}>
