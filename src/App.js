@@ -393,10 +393,13 @@ export default function App() {
             ))}
           </div>
           <FadeIn delay={500}>
-            <div className="vip-card">
-              <Eyebrow text="Sala VIP" />
-              <h5 style={{ fontFamily: "'Playfair Display',serif", fontSize: 20, fontWeight: 500, color: 'var(--gold)', marginBottom: 10 }}>Ambiente reservado para momentos exclusivos</h5>
-              <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 14, fontWeight: 300, color: 'var(--txts)', lineHeight: 1.9, marginBottom: 20 }}>
+            <div className="diff-card" style={{ gridColumn: isMobile ? '1' : '1 / -1' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10 }}>
+                <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 9, fontWeight: 700, letterSpacing: '.32em', textTransform: 'uppercase', color: 'var(--gold3)' }}>Sala VIP</span>
+                <span style={{ fontFamily: "'Playfair Display',serif", fontSize: 10, fontWeight: 700, letterSpacing: '.4em', color: 'var(--gold)', opacity: .3 }}>VIP</span>
+              </div>
+              <h5 style={{ fontFamily: "'Playfair Display',serif", fontSize: 20, fontWeight: 500, color: 'var(--txt)', marginBottom: 8 }}>Ambiente reservado para momentos exclusivos</h5>
+              <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 13, fontWeight: 300, color: 'var(--txts)', lineHeight: 1.9, marginBottom: 20 }}>
                 Espaço privativo com decoração refinada, iluminação especial e serviço dedicado — para quem deseja um momento à parte durante a celebração.
               </p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
@@ -412,26 +415,11 @@ export default function App() {
       {/* SA SPREAD ADULTO */}
       <section className="spread" style={{ height: isMobile ? '70vh' : '85vh' }}>
         <img className="spread-img" src="/images/spread-2.png" alt="Festa Adulto Felicitá Pampulha" style={{ objectPosition: 'center center' }} />
-        <div className="spread-veil" />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom,rgba(10,10,10,.5) 0%,rgba(10,10,10,.2) 30%,rgba(10,10,10,.2) 50%,rgba(10,10,10,.88) 100%)' }} />
         <div style={{ position: 'absolute', bottom: isMobile ? 48 : 80, left: isMobile ? 24 : 64, zIndex: 20 }}>
           <FadeIn>
             <p style={{ fontFamily: "'Cormorant Garamond',serif", fontStyle: 'italic', fontSize: isMobile ? 18 : 22, fontWeight: 300, color: 'rgba(255,255,255,.75)', marginBottom: 8 }}>uma celebração à altura</p>
             <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: isMobile ? 'clamp(26px,7vw,36px)' : 'clamp(34px,3.5vw,48px)', fontWeight: 700, color: '#FFFFFF', lineHeight: 1.1 }}>De Quem Você É</h2>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* SEPARADOR */}
-      <div style={{ height: 4, background: 'linear-gradient(90deg, var(--dark), var(--gold), var(--dark))' }} />
-
-      {/* SB SPREAD 15 ANOS */}
-      <section className="spread" style={{ height: isMobile ? '70vh' : '85vh' }}>
-        <img className="spread-img" src="/images/spread-3.png" alt="Festa 15 Anos Felicitá Pampulha" style={{ objectPosition: 'center center' }} />
-        <div className="spread-veil" />
-        <div style={{ position: 'absolute', bottom: isMobile ? 48 : 80, left: isMobile ? 24 : 64, zIndex: 20 }}>
-          <FadeIn>
-            <p style={{ fontFamily: "'Cormorant Garamond',serif", fontStyle: 'italic', fontSize: isMobile ? 18 : 22, fontWeight: 300, color: 'rgba(255,255,255,.75)', marginBottom: 8 }}>o dia mais esperado da sua vida</p>
-            <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: isMobile ? 'clamp(26px,7vw,36px)' : 'clamp(34px,3.5vw,48px)', fontWeight: 700, color: '#FFFFFF', lineHeight: 1.1 }}>Realizado Como Você Sonhou</h2>
           </FadeIn>
         </div>
       </section>
@@ -464,6 +452,18 @@ export default function App() {
               <Frame src="/images/celebration.png" alt="Boate Felicitá" style={{ aspectRatio: '4/5' }} imgStyle={{ objectPosition: 'center 30%' }} />
             </FadeIn>
           </div>
+        </div>
+      </section>
+
+      {/* SB SPREAD 15 ANOS */}
+      <section className="spread" style={{ height: isMobile ? '70vh' : '85vh' }}>
+        <img className="spread-img" src="/images/spread-3.png" alt="Festa 15 Anos Felicitá Pampulha" style={{ objectPosition: 'center center' }} />
+        <div className="spread-veil" />
+        <div style={{ position: 'absolute', bottom: isMobile ? 48 : 80, left: isMobile ? 24 : 64, zIndex: 20 }}>
+          <FadeIn>
+            <p style={{ fontFamily: "'Cormorant Garamond',serif", fontStyle: 'italic', fontSize: isMobile ? 18 : 22, fontWeight: 300, color: 'rgba(255,255,255,.75)', marginBottom: 8 }}>o dia mais esperado da sua vida</p>
+            <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: isMobile ? 'clamp(26px,7vw,36px)' : 'clamp(34px,3.5vw,48px)', fontWeight: 700, color: '#FFFFFF', lineHeight: 1.1 }}>Realizado Como Você Sonhou</h2>
+          </FadeIn>
         </div>
       </section>
 
