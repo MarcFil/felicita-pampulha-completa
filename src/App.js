@@ -188,7 +188,7 @@ const PRICING = [
 export default function App() {
   useEffect(() => { injectStyles(); }, []);
   const isMobile = useIsMobile();
-  const gridBg = { backgroundImage: 'linear-gradient(var(--gold10) 1px,transparent 1px),linear-gradient(90deg,var(--gold10) 1px,transparent 1px)', backgroundSize: '32px 32px' };
+  const gridBg = { backgroundImage: 'linear-gradient(rgba(201,168,76,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.03) 1px,transparent 1px)', backgroundSize: '40px 40px' };
 
   return (
     <div style={{ backgroundColor: 'var(--cream)', minHeight: '100vh', overflowX: 'hidden' }}>
@@ -277,18 +277,10 @@ export default function App() {
         <img className="spread-img" src="/images/spread-1.png" alt="Área externa Espaço Felicitá Pampulha" style={{ objectPosition: 'center center' }} />
         <div className="spread-veil" />
         <div style={{ position: 'absolute', top: 24, right: 32, zIndex: 20 }}><LogoLight height={44} /></div>
-        <div style={{ position: 'absolute', bottom: isMobile ? 48 : 80, left: isMobile ? 24 : 64, right: isMobile ? 24 : 64, zIndex: 20 }}>
+        <div style={{ position: 'absolute', bottom: isMobile ? 48 : 80, left: isMobile ? 24 : 64, zIndex: 20 }}>
           <FadeIn>
-            <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 9, fontWeight: 700, letterSpacing: '.5em', textTransform: 'uppercase', color: 'var(--gold)', border: '1px solid var(--gold50)', padding: '5px 18px', borderRadius: 999, display: 'inline-block', marginBottom: 24 }}>Cerimônia ao Ar Livre</span>
-            <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: isMobile ? 'clamp(28px,8vw,44px)' : 'clamp(44px,5.5vw,76px)', fontWeight: 700, color: '#FFFFFF', lineHeight: 1.06, marginBottom: 16, maxWidth: 820 }}>
-              O único espaço em Belo Horizonte<br />
-              <span style={{ color: 'var(--gold2)', fontStyle: 'italic' }}>para quem recusa o ordinário.</span>
-            </h2>
-            {!isMobile && (
-              <p style={{ fontFamily: "'Cormorant Garamond',serif", fontStyle: 'italic', fontSize: 22, color: 'rgba(255,255,255,.65)', lineHeight: 1.8, maxWidth: 620 }}>
-                Porque alguns momentos exigem o céu como teto, o jardim como cenário e a noite como cúmplice — e apenas um espaço em BH oferece tudo isso com a exclusividade que a ocasião exige.
-              </p>
-            )}
+            <p style={{ fontFamily: "'Cormorant Garamond',serif", fontStyle: 'italic', fontSize: isMobile ? 18 : 22, fontWeight: 300, color: 'rgba(255,255,255,.75)', marginBottom: 8 }}>o único espaço em BH com</p>
+            <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: isMobile ? 'clamp(26px,7vw,36px)' : 'clamp(32px,3.2vw,46px)', fontWeight: 700, color: '#FFFFFF', lineHeight: 1.1 }}>Cerimônia ao Ar Livre</h2>
           </FadeIn>
         </div>
       </section>
@@ -331,34 +323,31 @@ export default function App() {
       </section>
 
       {/* S4 EQUIPE */}
-      <section style={{ backgroundColor: 'var(--dark2)', padding: isMobile ? '72px 24px' : '96px 64px', ...gridBg }}>
+      <section style={{ backgroundColor: 'var(--dark2)', padding: isMobile ? '72px 24px' : '96px 64px' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <FadeIn>
-            <div style={{ textAlign: 'center', marginBottom: 64 }}>
-              <EyebrowLight text="Profissionais Dedicados" />
-              <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: 'clamp(28px,3.5vw,46px)', fontWeight: 700, color: 'var(--wht)', lineHeight: 1.1, marginBottom: 8 }}>A equipe que transforma</h2>
-              <h2 style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 'clamp(28px,3.5vw,46px)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gold2)', lineHeight: 1.1 }}>cada detalhe em magia.</h2>
-              <Rule center light />
-              <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 15, fontWeight: 300, color: 'rgba(255,255,255,.45)', maxWidth: 540, margin: '16px auto 0', lineHeight: 2 }}>
-                Cada membro da equipe é treinado para antecipar necessidades, garantir segurança e transformar cada minuto da festa em um momento inesquecível.
-              </p>
-            </div>
-          </FadeIn>
           <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: isMobile ? 40 : 72, alignItems: 'start' }}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
-              {[
-                { t: 'Coordenador do Evento', d: 'Orquestração completa — do planejamento ao último brinde' },
-                { t: 'Garçons', d: 'Serviço impecável e presença discreta durante toda a celebração' },
-                { t: 'Porteiro', d: 'Recepção calorosa e controle de acesso com cordialidade' },
-                { t: 'Equipe de Cozinha', d: 'Especialistas em experiência gastronômica de alto nível' },
-              ].map((item, i) => (
-                <FadeIn delay={i * 80} key={i}>
-                  <div className="team-item">
-                    <h5 style={{ fontFamily: "'Playfair Display',serif", fontSize: 18, fontWeight: 500, color: 'var(--gold2)', marginBottom: 6 }}>{item.t}</h5>
-                    <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 14, fontWeight: 300, color: 'rgba(255,255,255,.4)', lineHeight: 1.8 }}>{item.d}</p>
-                  </div>
-                </FadeIn>
-              ))}
+            <div>
+              <FadeIn>
+                <EyebrowLight text="Profissionais Dedicados" />
+                <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: 'clamp(28px,3vw,42px)', fontWeight: 700, color: 'var(--wht)', lineHeight: 1.1, marginBottom: 8 }}>A equipe que transforma</h2>
+                <h2 style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 'clamp(28px,3vw,42px)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gold2)', lineHeight: 1.1 }}>cada detalhe em magia.</h2>
+                <Rule light />
+              </FadeIn>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 24, marginTop: 32 }}>
+                {[
+                  { t: 'Coordenador do Evento', d: 'Orquestração completa — do planejamento ao último brinde' },
+                  { t: 'Garçons', d: 'Serviço impecável e presença discreta durante toda a celebração' },
+                  { t: 'Porteiro', d: 'Recepção calorosa e controle de acesso com cordialidade' },
+                  { t: 'Equipe de Cozinha', d: 'Especialistas em experiência gastronômica de alto nível' },
+                ].map((item, i) => (
+                  <FadeIn delay={i * 80} key={i}>
+                    <div className="team-item">
+                      <h5 style={{ fontFamily: "'Playfair Display',serif", fontSize: 17, fontWeight: 500, color: 'var(--gold2)', marginBottom: 6 }}>{item.t}</h5>
+                      <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 13, fontWeight: 300, color: 'rgba(255,255,255,.4)', lineHeight: 1.8 }}>{item.d}</p>
+                    </div>
+                  </FadeIn>
+                ))}
+              </div>
             </div>
             <FadeIn delay={200}><TeamVideo /></FadeIn>
           </div>
