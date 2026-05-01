@@ -113,7 +113,6 @@ const EyG=({text})=>(<span style={{fontFamily:"'Montserrat',sans-serif",fontSize
 const RuleR=({center=false})=>(<div style={{width:56,height:2,background:center?'linear-gradient(90deg,transparent,var(--rose),transparent)':'linear-gradient(90deg,var(--rose),transparent)',margin:center?'18px auto':'18px 0',borderRadius:2}}/>);
 const RuleG=({center=false})=>(<div style={{width:56,height:1,background:center?'linear-gradient(90deg,transparent,var(--gold),transparent)':'linear-gradient(90deg,var(--gold),transparent)',margin:center?'18px auto':'18px 0'}}/>);
 
-const Orn=()=>(<div style={{display:'flex',alignItems:'center',gap:12,marginBottom:16}}><div style={{height:1,width:40,background:'linear-gradient(90deg,transparent,rgba(255,255,255,.5))'}}/><span style={{color:'rgba(255,255,255,.7)',fontSize:14}}>✦</span><div style={{height:1,width:40,background:'linear-gradient(90deg,rgba(255,255,255,.5),transparent)'}}/></div>);
 
 const Frame=({src,alt,style:s={},imgStyle={}})=>(<div className="photo-frame" style={s}><div className="photo-frame-border"/><img src={src} alt={alt} style={{objectPosition:'center center',...imgStyle}}/></div>);
 
