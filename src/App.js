@@ -259,7 +259,7 @@ export default function App() {
               </FadeIn>
               <FadeIn delay={400}>
                 <div style={{ display: 'grid', gridTemplateColumns: isMobile ? 'repeat(2,1fr)' : 'repeat(4,1fr)', gap: 0, borderTop: '1px solid var(--gold20)', paddingTop: 32, marginTop: 8 }}>
-                  {[{ n: '+14', l: 'Anos de história' }, { n: '3', l: 'Unidades em BH' }, { n: '300', l: 'Convidados' }, { n: 'Próprio', l: 'Buffet exclusivo' }].map((s, i) => (
+                  {[{ n: '+14', l: 'Anos de história' }, { n: '3', l: 'Unidades em BH' }, { n: '250+100', l: 'Interno · Externo' }, { n: 'Próprio', l: 'Buffet exclusivo' }].map((s, i) => (
                     <div key={i} className="stat-item">
                       <span style={{ fontFamily: "'Playfair Display',serif", fontSize: 30, fontWeight: 400, color: 'var(--gold)', display: 'block', lineHeight: 1.1, marginBottom: 6 }}>{s.n}</span>
                       <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: '.22em', textTransform: 'uppercase', color: 'var(--txts)' }}>{s.l}</span>
@@ -295,7 +295,7 @@ export default function App() {
               <h2 style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 'clamp(28px,3vw,44px)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gold2)', lineHeight: 1.1 }}>Uma experiência sem igual.</h2>
               <Rule light />
               <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 15, fontWeight: 300, color: 'rgba(255,255,255,.5)', lineHeight: 2, marginTop: 8, marginBottom: 36 }}>
-                A Unidade Pampulha é o único espaço em Belo Horizonte que oferece cerimônias ao ar livre em um ambiente completamente exclusivo. Um jardim projetado, iluminação cênica e acesso controlado — para que o momento mais importante da sua vida aconteça exatamente como você sempre imaginou.
+                A Unidade Pampulha oferece cerimônias ao ar livre em um jardim completamente exclusivo. Um ambiente projetado com acesso controlado — para que o momento mais importante da sua vida aconteça exatamente como você sempre imaginou.
               </p>
               <blockquote style={{ fontFamily: "'Cormorant Garamond',serif", fontStyle: 'italic', fontSize: 22, color: 'var(--gold2)', lineHeight: 1.8, borderLeft: '1.5px solid var(--gold)', paddingLeft: 22 }}>
                 "Nenhum salão reproduz o que a natureza oferece — e nenhum espaço ao ar livre em BH oferece o que o Felicitá Pampulha entrega."
@@ -304,11 +304,9 @@ export default function App() {
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
               {[
                 { t: 'Jardim Privativo', d: 'Área exclusiva, sem interferência externa' },
-                { t: 'Iluminação Cênica', d: 'Projeto luminotécnico assinado' },
                 { t: 'Paisagismo Exclusivo', d: 'Vegetação selecionada e curada' },
                 { t: 'Privacidade Total', d: 'Acesso controlado durante toda a celebração' },
                 { t: 'Cerimônia + Recepção', d: 'Transição fluida do externo ao salão' },
-                { t: 'Único em BH', d: 'Nenhum outro espaço oferece esse diferencial' },
               ].map((item, i) => (
                 <FadeIn delay={i * 60} key={i}>
                   <div className="outdoor-stat">
@@ -370,13 +368,13 @@ export default function App() {
           </FadeIn>
           <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : 'repeat(3, 1fr)', gap: 10, marginBottom: 10 }}>
             {[
-              { t: 'Capacidade', v: '300', s: 'convidados' },
+              { t: 'Capacidade', v: '250 · 100', s: 'interno · externo' },
               { t: 'Exclusividade', v: 'Sala VIP', s: 'para os anfitriões' },
               { t: 'Conforto', v: 'Climatizado', s: 'todos os ambientes' },
               { t: 'Elegância', v: 'Lustres', s: 'de cristal' },
               { t: 'Segurança', v: 'Câmeras', s: 'circuito completo' },
               { t: 'Palco', v: 'Estruturado', s: 'apresentações ao vivo' },
-              { t: 'Paisagismo', v: 'Exclusivo', s: 'projeto assinado' },
+              { t: 'Paisagismo', v: 'Exclusivo', s: 'jardim projetado' },
               { t: 'Acessibilidade', v: 'Completa', s: 'todos os ambientes' },
               { t: 'Quarto da Noiva', v: 'Privativo', s: 'preparação exclusiva' },
               { t: 'Quarto do Noivo', v: 'Privativo', s: 'lounge exclusivo' },
@@ -400,10 +398,10 @@ export default function App() {
               </div>
               <h5 style={{ fontFamily: "'Playfair Display',serif", fontSize: 20, fontWeight: 500, color: 'var(--txt)', marginBottom: 8 }}>Ambiente reservado para momentos exclusivos</h5>
               <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 13, fontWeight: 300, color: 'var(--txts)', lineHeight: 1.9, marginBottom: 20 }}>
-                Espaço privativo com decoração refinada, iluminação especial e serviço dedicado — para quem deseja um momento à parte durante a celebração.
+                Espaço privativo com decoração refinada e serviço dedicado — para quem deseja um momento à parte durante a celebração.
               </p>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
-                {['Acesso exclusivo', 'Decoração diferenciada', 'Serviço personalizado', 'Ambiente climatizado', 'Iluminação especial'].map((item, i) => (
+                {['Acesso exclusivo', 'Decoração diferenciada', 'Serviço personalizado', 'Ambiente climatizado'].map((item, i) => (
                   <span key={i} style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 11, fontWeight: 500, color: 'var(--gold3)', background: 'var(--gold10)', border: '1px solid var(--gold20)', padding: '4px 14px', borderRadius: 999 }}>{item}</span>
                 ))}
               </div>
@@ -426,32 +424,25 @@ export default function App() {
 
       {/* S8 BOATE */}
       <section style={{ backgroundColor: 'var(--cream2)', padding: isMobile ? '72px 24px' : '96px 64px' }}>
-        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: isMobile ? 48 : 80, alignItems: 'start' }}>
-            <div>
-              <FadeIn>
-                <Eyebrow text="Boate · Luz · Som" />
-                <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: 'clamp(28px,3vw,44px)', fontWeight: 700, color: 'var(--txt)', lineHeight: 1.1, marginBottom: 8 }}>Onde a festa</h2>
-                <h2 style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 'clamp(28px,3vw,44px)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gold3)', lineHeight: 1.1 }}>ganha vida.</h2>
-                <Rule />
-                <blockquote style={{ fontFamily: "'Cormorant Garamond',serif", fontStyle: 'italic', fontSize: 21, color: 'var(--txts)', lineHeight: 1.85, borderLeft: '1.5px solid var(--gold)', paddingLeft: 22, margin: '24px 0 32px' }}>
-                  "Uma estrutura de boate completa, pensada para que a energia e a magia da noite sejam sentidas por cada convidado — do primeiro ao último momento."
-                </blockquote>
-              </FadeIn>
-              <FadeIn delay={200}>
-                <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 14 }}>
-                  {['Painel de LED', 'Faixas de LED no Teto', 'DJ Profissional'].map((item, i) => (
-                    <li key={i} style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 14, fontWeight: 300, color: 'var(--txts)', display: 'flex', alignItems: 'center', gap: 14 }}>
-                      <span style={{ width: 24, height: 1, background: 'var(--gold)', flexShrink: 0 }} />{item}
-                    </li>
-                  ))}
-                </ul>
-              </FadeIn>
+        <div style={{ maxWidth: 800, margin: '0 auto', textAlign: 'center' }}>
+          <FadeIn>
+            <Eyebrow text="Boate · Luz · Som" center />
+            <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: 'clamp(28px,3vw,44px)', fontWeight: 700, color: 'var(--txt)', lineHeight: 1.1, marginBottom: 8 }}>Onde a festa</h2>
+            <h2 style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 'clamp(28px,3vw,44px)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gold3)', lineHeight: 1.1 }}>ganha vida.</h2>
+            <Rule center />
+            <blockquote style={{ fontFamily: "'Cormorant Garamond',serif", fontStyle: 'italic', fontSize: 21, color: 'var(--txts)', lineHeight: 1.85, borderLeft: '1.5px solid var(--gold)', paddingLeft: 22, margin: '24px auto 40px', textAlign: 'left', maxWidth: 560 }}>
+              "Uma estrutura de boate completa, pensada para que a energia e a magia da noite sejam sentidas por cada convidado — do primeiro ao último momento."
+            </blockquote>
+          </FadeIn>
+          <FadeIn delay={200}>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: isMobile ? 24 : 56, flexWrap: 'wrap' }}>
+              {['Painel de LED', 'Faixas de LED no Teto', 'DJ Profissional'].map((item, i) => (
+                <div key={i} style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 14, fontWeight: 300, color: 'var(--txts)', display: 'flex', alignItems: 'center', gap: 12 }}>
+                  <span style={{ width: 20, height: 1, background: 'var(--gold)', flexShrink: 0 }} />{item}
+                </div>
+              ))}
             </div>
-            <FadeIn delay={150}>
-              <Frame src="/images/celebration.png" alt="Boate Felicitá" style={{ aspectRatio: '4/5' }} imgStyle={{ objectPosition: 'center 30%' }} />
-            </FadeIn>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -526,7 +517,7 @@ export default function App() {
           </FadeIn>
           <FadeIn delay={200}>
             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 12, marginBottom: 40 }}>
-              {['Mínimo 100 convidados', 'Buffet R$ 250,00 por pessoa', 'Locação a partir de R$ 23.000'].map((info, i) => (
+              {['Mínimo 100 convidados'].map((info, i) => (
                 <span key={i} style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 10, fontWeight: 600, letterSpacing: '.2em', textTransform: 'uppercase', color: 'var(--gold)', background: 'var(--gold10)', border: '1px solid var(--gold30)', padding: '7px 20px', borderRadius: 999 }}>{info}</span>
               ))}
             </div>
