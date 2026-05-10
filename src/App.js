@@ -410,6 +410,60 @@ export default function App() {
         </div>
       </section>
 
+      {/* S5B MOBILIÁRIO + DECORAÇÃO */}
+      <section style={{ background: 'var(--cream)', padding: isMobile ? '72px 24px' : '88px 64px' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: isMobile ? 40 : 32, alignItems: 'start' }}>
+
+            {/* MOBILIÁRIO */}
+            <FadeIn>
+              <div style={{ border: '1px solid var(--gold20)', background: 'var(--wht)', borderRadius: 4, padding: '36px 32px', position: 'relative', overflow: 'hidden' }}>
+                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: 'linear-gradient(90deg,var(--gold3),var(--gold),var(--gold2))' }} />
+                <Eyebrow text="Mobiliário" />
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
+                  {[
+                    { n: '15', l: 'Mesas redondas' },
+                    { n: '02', l: 'Mesas da família' },
+                    { n: '02', l: 'Mesas do bolo' },
+                    { n: '01', l: 'Mesa de recepção' },
+                    { n: '03', l: 'Espaços lounge' },
+                    { n: '160', l: 'Assentos no total' },
+                  ].map((item, i, arr) => (
+                    <div key={i} style={{ display: 'flex', alignItems: 'baseline', gap: 20, padding: '16px 0', borderBottom: i < arr.length - 1 ? '1px solid var(--gold10)' : 'none' }}>
+                      <span style={{ fontFamily: "'Playfair Display',serif", fontSize: 32, fontWeight: 400, color: 'var(--gold)', lineHeight: 1, minWidth: 52, flexShrink: 0 }}>{item.n}</span>
+                      <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 13, fontWeight: 400, letterSpacing: '.08em', color: 'var(--txts)' }}>{item.l}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* DECORAÇÃO */}
+            <FadeIn delay={120}>
+              <div style={{ border: '1px solid var(--gold20)', background: 'var(--wht)', borderRadius: 4, padding: '36px 32px', position: 'relative', overflow: 'hidden' }}>
+                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: 'linear-gradient(90deg,var(--gold3),var(--gold),var(--gold2))' }} />
+                <Eyebrow text="Decoração" />
+                <div style={{ display: 'flex', flexDirection: 'column', gap: 0 }}>
+                  {[
+                    { n: '15', l: 'Arranjos altos e baixos — mesas de convidados' },
+                    { n: '04', l: 'Arranjos — mesa do bolo' },
+                    { n: '01', l: 'Arranjo — mesa do café' },
+                    { n: '—', l: 'Peças decorativas' },
+                    { n: '—', l: 'Porta-doces' },
+                  ].map((item, i, arr) => (
+                    <div key={i} style={{ display: 'flex', alignItems: 'baseline', gap: 20, padding: '16px 0', borderBottom: i < arr.length - 1 ? '1px solid var(--gold10)' : 'none' }}>
+                      <span style={{ fontFamily: "'Playfair Display',serif", fontSize: 32, fontWeight: 400, color: 'var(--gold)', lineHeight: 1, minWidth: 52, flexShrink: 0 }}>{item.n}</span>
+                      <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 13, fontWeight: 400, letterSpacing: '.08em', color: 'var(--txts)' }}>{item.l}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </FadeIn>
+
+          </div>
+        </div>
+      </section>
+
       {/* SA SPREAD ADULTO */}
       <section className="spread" style={{ height: isMobile ? '70vh' : '85vh' }}>
         <img className="spread-img" src="/images/spread-2.png" alt="Festa Adulto Felicitá Pampulha" style={{ objectPosition: 'center center' }} />
