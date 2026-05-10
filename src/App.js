@@ -638,7 +638,7 @@ export default function App() {
             {[
               { l:'Instagram', v:<a href="https://www.instagram.com/espaco_felicita" target="_blank" rel="noopener noreferrer" style={{ color:'var(--wht)', textDecoration:'none' }}>@espaco_felicita</a> },
               { l:'WhatsApp', v:<a href="https://wa.me/5531973560312?text=Olá!%20Vim%20pela%20proposta%20Pampulha%20Completa." target="_blank" rel="noopener noreferrer" style={{ color:'var(--wht)', textDecoration:'none' }}>(31) 97356-0312</a> },
-              { l:'Endereço', v:<a href="https://maps.google.com/?q=Avenida+Otacílio+Negrão+de+Lima,+6920,+Bandeirantes,+Belo+Horizonte,+MG" target="_blank" rel="noopener noreferrer" style={{ color:'var(--wht)', textDecoration:'none' }}>Av. Otacílio Negrão de Lima, 6920<br/>Bandeirantes, BH</a> },
+              { l:'Endereço', v:<a href="https://maps.google.com/?q=Avenida+Otacílio+Negrão+de+Lima,+6920,+Bandeirantes,+Belo+Horizonte,+MG" target="_blank" rel="noopener noreferrer" style={{ color:'var(--wht)', textDecoration:'none' }}>Felicitá Pampulha</a> },
               { l:'Site', v:<a href="https://www.espacofelicita.com.br/site/" target="_blank" rel="noopener noreferrer" style={{ color:'var(--wht)', textDecoration:'none' }}>www.espacofelicita.com.br</a> },
             ].map((ct,i)=>(
               <div key={i} style={{ display:'flex', flexDirection:'column', gap:10 }}>
