@@ -209,7 +209,7 @@ export default function App() {
         <div style={{ position: 'absolute', bottom: isMobile ? 40 : 90, left: isMobile ? 24 : 56, right: isMobile ? 24 : 56, zIndex: 2 }}>
           <FadeIn delay={150}>
             <h1 style={{ fontFamily: "'Playfair Display',serif", fontSize: isMobile ? 'clamp(32px,9vw,48px)' : 'clamp(52px,6vw,84px)', fontWeight: 700, color: '#fff', lineHeight: 1.06, marginBottom: isMobile ? 12 : 20, letterSpacing: '-.02em' }}>
-              Uma noite que <span style={{ color: 'var(--gold2)', fontStyle: 'italic' }}>nunca se esquece.</span>
+              Um dia que <span style={{ color: 'var(--gold2)', fontStyle: 'italic' }}>nunca se esquece.</span>
             </h1>
           </FadeIn>
           {!isMobile && (
