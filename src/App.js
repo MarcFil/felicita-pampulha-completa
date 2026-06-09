@@ -380,6 +380,7 @@ export default function App() {
               { t: 'Quarto do Noivo', v: 'Privativo', s: 'lounge exclusivo' },
               { t: 'Estacionamento', v: 'Reservado', s: 'aos anfitriões do evento' },
               { t: 'Área Externa', v: 'Exclusiva', s: 'cerimônias ao ar livre' },
+              { t: 'Área Total Externa', v: '600m²', s: 'livre para cadeiras — sem palco e boate' },
             ].map((c, i) => (
               <FadeIn delay={i * 40} key={i}>
                 <div className="diff-card">
@@ -450,6 +451,8 @@ export default function App() {
                     { n: '01', l: 'Arranjo — mesa do café' },
                     { n: '—', l: 'Peças decorativas' },
                     { n: '—', l: 'Porta-doces' },
+                    { n: '—', l: 'Flores da época' },
+                    { n: '—', l: 'Arranjo mesa jantar' },
                   ].map((item, i, arr) => (
                     <div key={i} style={{ display: 'flex', alignItems: 'baseline', gap: 20, padding: '16px 0', borderBottom: i < arr.length - 1 ? '1px solid var(--gold10)' : 'none' }}>
                       <span style={{ fontFamily: "'Playfair Display',serif", fontSize: 32, fontWeight: 400, color: 'var(--gold)', lineHeight: 1, minWidth: 52, flexShrink: 0 }}>{item.n}</span>
@@ -478,25 +481,55 @@ export default function App() {
 
       {/* S8 BOATE */}
       <section style={{ backgroundColor: 'var(--cream2)', padding: isMobile ? '72px 24px' : '96px 64px' }}>
-        <div style={{ maxWidth: 800, margin: '0 auto', textAlign: 'center' }}>
+        <div style={{ maxWidth: 1000, margin: '0 auto' }}>
           <FadeIn>
             <Eyebrow text="Boate · Luz · Som" center />
-            <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: 'clamp(28px,3vw,44px)', fontWeight: 700, color: 'var(--txt)', lineHeight: 1.1, marginBottom: 8 }}>Onde a festa</h2>
-            <h2 style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 'clamp(28px,3vw,44px)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gold3)', lineHeight: 1.1 }}>ganha vida.</h2>
+            <h2 style={{ fontFamily: "'Playfair Display',serif", fontSize: 'clamp(28px,3vw,44px)', fontWeight: 700, color: 'var(--txt)', lineHeight: 1.1, marginBottom: 8, textAlign: 'center' }}>Onde a festa</h2>
+            <h2 style={{ fontFamily: "'Cormorant Garamond',serif", fontSize: 'clamp(28px,3vw,44px)', fontStyle: 'italic', fontWeight: 400, color: 'var(--gold3)', lineHeight: 1.1, textAlign: 'center' }}>ganha vida.</h2>
             <Rule center />
-            <blockquote style={{ fontFamily: "'Cormorant Garamond',serif", fontStyle: 'italic', fontSize: 21, color: 'var(--txts)', lineHeight: 1.85, borderLeft: '1.5px solid var(--gold)', paddingLeft: 22, margin: '24px auto 40px', textAlign: 'left', maxWidth: 560 }}>
-              "Uma estrutura de boate completa, pensada para que a energia e a magia da noite sejam sentidas por cada convidado — do primeiro ao último momento."
-            </blockquote>
           </FadeIn>
-          <FadeIn delay={200}>
-            <div style={{ display: 'flex', justifyContent: 'center', gap: isMobile ? 24 : 56, flexWrap: 'wrap' }}>
-              {['Painel de LED', 'Faixas de LED no Teto', 'DJ Profissional'].map((item, i) => (
-                <div key={i} style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 14, fontWeight: 300, color: 'var(--txts)', display: 'flex', alignItems: 'center', gap: 12 }}>
-                  <span style={{ width: 20, height: 1, background: 'var(--gold)', flexShrink: 0 }} />{item}
-                </div>
-              ))}
-            </div>
-          </FadeIn>
+          <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: 24, marginTop: 40 }}>
+            <FadeIn delay={100}>
+              <div style={{ border: '1px solid var(--gold20)', background: 'var(--wht)', borderRadius: 4, padding: '28px 28px', position: 'relative', overflow: 'hidden' }}>
+                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: 'linear-gradient(90deg,var(--gold3),var(--gold),var(--gold2))' }} />
+                <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 9, fontWeight: 700, letterSpacing: '.4em', textTransform: 'uppercase', color: 'var(--gold3)', display: 'block', marginBottom: 20 }}>Sonorização</span>
+                {[
+                  '02 Caixas Altas',
+                  '02 Subwoofers',
+                  '01 Retorno',
+                  '01 Mesa de som pequena',
+                  '01 Microfone',
+                  '01 Kit cabeamento e acabamento',
+                  '01 DJ durante o evento',
+                  '01 Setup DJ',
+                ].map((item, i) => (
+                  <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '10px 0', borderBottom: '1px solid var(--gold10)' }}>
+                    <span style={{ width: 16, height: 1, background: 'var(--gold)', flexShrink: 0 }} />
+                    <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 13, fontWeight: 300, color: 'var(--txts)' }}>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </FadeIn>
+            <FadeIn delay={150}>
+              <div style={{ border: '1px solid var(--gold20)', background: 'var(--wht)', borderRadius: 4, padding: '28px 28px', position: 'relative', overflow: 'hidden' }}>
+                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: 'linear-gradient(90deg,var(--gold3),var(--gold),var(--gold2))' }} />
+                <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 9, fontWeight: 700, letterSpacing: '.4em', textTransform: 'uppercase', color: 'var(--gold3)', display: 'block', marginBottom: 20 }}>Iluminação</span>
+                {[
+                  '02 COBs frente palco',
+                  '04 Beams',
+                  '06 Par LED',
+                  '01 Mesa DMX',
+                  '01 Técnico responsável pelos equipamentos',
+                  '01 Kit cabeamento e acabamento',
+                ].map((item, i, arr) => (
+                  <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 12, padding: '10px 0', borderBottom: i < arr.length - 1 ? '1px solid var(--gold10)' : 'none' }}>
+                    <span style={{ width: 16, height: 1, background: 'var(--gold)', flexShrink: 0 }} />
+                    <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 13, fontWeight: 300, color: 'var(--txts)' }}>{item}</span>
+                  </div>
+                ))}
+              </div>
+            </FadeIn>
+          </div>
         </div>
       </section>
 
@@ -526,21 +559,26 @@ export default function App() {
               </p>
             </div>
           </FadeIn>
+
+          {/* FOTOS */}
           <FadeIn delay={100}>
             <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: 12, marginBottom: 56 }}>
               <Frame src="/images/buffet-1.jpg" alt="Buffet Felicitá" style={{ aspectRatio: '4/3' }} imgStyle={{ objectPosition: 'center center' }} />
               <Frame src="/images/buffet-2.jpg" alt="Buffet Felicitá" style={{ aspectRatio: '4/3' }} imgStyle={{ objectPosition: 'center center' }} />
             </div>
           </FadeIn>
-          <FadeIn delay={200}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 0, maxWidth: 800, margin: '0 auto' }}>
+
+          {/* ITENS DO CARDÁPIO */}
+          <FadeIn delay={150}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 0, maxWidth: 800, margin: '0 auto 56px' }}>
               <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 11, fontWeight: 600, color: 'var(--txts)', marginBottom: 20, letterSpacing: '.08em' }}>
                 *Ítens opcionais — composição definida conforme o pacote contratado.
               </p>
               {[
-                { t: 'Jantar completo *', d: 'Pratos quentes, saladas, carnes e acompanhamentos' },
+                { t: 'Jantar completo *', d: 'Buffet à vontade — mínimo 15 opções por pessoa' },
                 { t: 'Mesa de frios *', d: 'Queijos, embutidos e acompanhamentos selecionados' },
                 { t: 'Massa ao vivo *', d: 'Preparo artesanal na frente dos convidados, com variedade de molhos e acompanhamentos' },
+                { t: 'Doces *', d: '05 doces por pessoa, incluso bolo comestível e fake' },
                 { t: 'Bar completo *', d: 'Bebidas alcoólicas, sucos, refrigerantes e água' },
               ].map((item, i) => (
                 <FadeIn delay={i * 60} key={i}>
@@ -552,6 +590,52 @@ export default function App() {
               ))}
             </div>
           </FadeIn>
+
+          {/* INFORMAÇÕES GERAIS + GARÇONS + CERVEJA */}
+          <div style={{ display: 'grid', gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr', gap: 24 }}>
+
+            {/* INFORMAÇÕES GERAIS */}
+            <FadeIn delay={200}>
+              <div style={{ border: '1px solid var(--gold20)', background: 'var(--wht)', borderRadius: 4, padding: '28px 28px', position: 'relative', overflow: 'hidden' }}>
+                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: 'linear-gradient(90deg,var(--gold3),var(--gold),var(--gold2))' }} />
+                <Eyebrow text="Informações Gerais" />
+                {[
+                  { v: '06h', l: 'Duração do evento' },
+                  { v: '05', l: 'Doces por pessoa' },
+                  { v: '15+', l: 'Opções no buffet por pessoa' },
+                  { v: '1/15', l: 'Garçom a cada 15 convidados' },
+                  { v: '01', l: 'Garçom exclusivo para o anfitrião' },
+                ].map((item, i, arr) => (
+                  <div key={i} style={{ display: 'flex', alignItems: 'baseline', gap: 20, padding: '14px 0', borderBottom: i < arr.length - 1 ? '1px solid var(--gold10)' : 'none' }}>
+                    <span style={{ fontFamily: "'Playfair Display',serif", fontSize: 26, fontWeight: 400, color: 'var(--gold)', lineHeight: 1, minWidth: 60, flexShrink: 0 }}>{item.v}</span>
+                    <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 13, fontWeight: 300, color: 'var(--txts)' }}>{item.l}</span>
+                  </div>
+                ))}
+              </div>
+            </FadeIn>
+
+            {/* CERVEJA */}
+            <FadeIn delay={250}>
+              <div style={{ border: '1px solid var(--gold20)', background: 'var(--wht)', borderRadius: 4, padding: '28px 28px', position: 'relative', overflow: 'hidden' }}>
+                <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: 'linear-gradient(90deg,var(--gold3),var(--gold),var(--gold2))' }} />
+                <Eyebrow text="Cerveja Original 600ml" />
+                <p style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 11, fontWeight: 300, color: 'var(--txts)', marginBottom: 20, lineHeight: 1.6 }}>Caixas com 24 unidades — conforme número de convidados</p>
+                {[
+                  { r: '100 a 120', v: '05 cx' },
+                  { r: '130 a 150', v: '08 cx' },
+                  { r: '160 a 200', v: '10 cx' },
+                  { r: '210 a 250', v: '12 cx' },
+                  { r: '260 a 300', v: '15 cx' },
+                ].map((item, i, arr) => (
+                  <div key={i} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '12px 0', borderBottom: i < arr.length - 1 ? '1px solid var(--gold10)' : 'none' }}>
+                    <span style={{ fontFamily: "'Montserrat',sans-serif", fontSize: 13, fontWeight: 300, color: 'var(--txts)' }}>{item.r} convidados</span>
+                    <span style={{ fontFamily: "'Playfair Display',serif", fontSize: 18, fontWeight: 500, color: 'var(--gold)' }}>{item.v}</span>
+                  </div>
+                ))}
+              </div>
+            </FadeIn>
+
+          </div>
         </div>
       </section>
 
