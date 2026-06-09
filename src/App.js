@@ -687,9 +687,9 @@ export default function App() {
                   <div key={i} style={{ padding:'16px 14px', border:'.5px solid var(--gold20)', background:'var(--dark2)', borderRadius:4, marginBottom:2 }}>
                     <span style={{ fontFamily:"'Playfair Display',serif", fontSize:20, fontWeight:500, color:'var(--gold)', display:'block', marginBottom:12 }}>{pax} convidados</span>
                     <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:8 }}>
-                      {[['2ª a 5ª',seg],['6ª · Dom · Fer',sexdom],['Sábado',sab]].map(([label,val],j)=>(
+                      {[['2ª a 5ª',seg],['6ª · Dom · Fer · Vésp',sexdom],['Sábado',sab]].map(([label,val],j)=>(
                         <div key={j} style={{ display:'flex', flexDirection:'column', gap:4, background:'var(--gold10)', border:'.5px solid var(--gold20)', borderRadius:4, padding:'8px 6px', textAlign:'center' }}>
-                          <span style={{ fontFamily:"'Montserrat',sans-serif", fontSize:8, fontWeight:700, color:'var(--gold)', letterSpacing:'.12em', textTransform:'uppercase' }}>{label}</span>
+                          <span style={{ fontFamily:"'Montserrat',sans-serif", fontSize:7, fontWeight:700, color:'var(--gold)', letterSpacing:'.06em', textTransform:'uppercase' }}>{label}</span>
                           <span style={{ fontFamily:"'Montserrat',sans-serif", fontSize:11, fontWeight:400, color:'rgba(250,250,250,.7)' }}>R$ {val}</span>
                         </div>
                       ))}
