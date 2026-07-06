@@ -575,10 +575,8 @@ export default function App() {
                 *Ítens opcionais — composição definida conforme o pacote contratado.
               </p>
               {[
-                { t: 'Jantar completo *', d: 'Buffet à vontade — mínimo 15 opções por pessoa' },
                 { t: 'Mesa de frios *', d: 'Queijos, embutidos e acompanhamentos selecionados' },
                 { t: 'Massa ao vivo *', d: 'Preparo artesanal na frente dos convidados, com variedade de molhos e acompanhamentos' },
-                { t: 'Doces *', d: '05 doces por pessoa, incluso bolo comestível e fake' },
                 { t: 'Bar completo *', d: 'Bebidas alcoólicas, sucos, refrigerantes e água' },
               ].map((item, i) => (
                 <FadeIn delay={i * 60} key={i}>
